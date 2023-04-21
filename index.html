@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Решение уравнений</title>
+  <link rel='stylesheet' href='main.css'>
+  <!--script src='jquery-3.6.3.min.js'></script-->  <!-- чтобы не заморачиваться с fetch, XMLHttpRequest -->
+  <script src='main.js'></script>
+  <script>
+    document.addEventListener('DOMContentLoaded',function(ev) {
+      paramsForm = document.getElementById('params-form');
+      paramsForm.addEventListener('submit',handleFormSubmit);
+    });
+  </script>
+</head>
+<body>
+  <div id='main-header'><b>РЕШЕНИЕ УРАВНЕНИЙ ВИДА</b><br>ax&sup2; + bx + c = 0</div>
+  <div id='params'>
+    <form id='params-form' action='solver.php' method='get'>
+      <label>a = <input id='param-a' name='param-a' type='number'></label>
+      <label>b = <input id='param-b' name='param-b' type='number'></label>
+      <label>c = <input id='param-c' name='param-c' type='number'></label>
+      <hr style='margin-top: 8px;'>
+      <button type='submit' title='Нажми на кнопку, получишь результат'>Решить!</button>
+    </form>
+  </div>
+  <div id='solution'>
+    <b><u>Результат:</u></b>
+    <div id='result'>пока пусто</div>
+  </div>
+</body>
+</html>
