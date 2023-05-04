@@ -1,9 +1,9 @@
 /*
-  ---------------------------
+  ==================================
   Основные данные и функции
-  ---------------------------
+  (c) 2023 LAGODROM Solutions Ltd.
+  ==================================
 */
-
 var
   paramsForm;
 
@@ -24,28 +24,8 @@ function handleFormSubmit(ev) {
   }).catch(function(error) {
     alert('Что-то пошло не так.\rОшибка: ',error);
   });
-
-  /*const
-    frmData = $('#params-form').serialize();
-
-  $.get(
-    'solver.php',
-    frmData,
-    function(rez) {
-      document.getElementById('x').innerHTML = rez;
-    }
-  );*/
 }
 
 function serializeForm(frmNode) {
   return new FormData(frmNode);
-  /*const
-    frmData=Array.from(frmNode.elements)
-      .filter((it) => !!it.name)
-      .map((el) => {
-        const
-          {name,value} = el;
-          return {name,value}
-      });
-  console.log(frmData);*/
 }

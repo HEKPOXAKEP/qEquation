@@ -1,4 +1,10 @@
 <?php
+/*
+  ----------------------------------
+  Решение квадратных уравнений
+  (c) 2023 LAGODROM Solutions Ltd.
+  ----------------------------------
+*/
   $a = (float)$_POST['param-a'];
   $b = (float)$_POST['param-b'];
   $c = (float)$_POST['param-c'];
